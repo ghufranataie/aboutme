@@ -11,7 +11,7 @@ class Educations extends StatelessWidget {
     Edus.add(Edu("assets/edus/kardan.png", "Kardan Institute", "MCSE", "Kabul", "2010"));
     return Scaffold(
       appBar: AppBar(
-        title: Text("Biography"),
+        title: Text("Educations"),
       ),
       body: ListView.builder(
         itemCount: Edus.length,
@@ -24,7 +24,10 @@ class Educations extends StatelessWidget {
               ),
               Expanded(
                 child: ListTile(
-                  title: Text(Edus[index].title),
+                  title: Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
+                    child: Text(Edus[index].title, style: TextStyle(fontSize: 22),),
+                  ),
                   subtitle: Text(Edus[index].schoolName +"\n" +Edus[index].year+ " - "+Edus[index].city),
                 ),
               )
