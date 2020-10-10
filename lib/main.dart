@@ -25,9 +25,9 @@ class Home extends StatelessWidget {
         "This was the Ghufran Ataie Biography for more details kindly click bellow social media icons to access the Ghufran Ataie online social icons";
     List<DItem> DItems = new List<DItem>();
     DItems.add(DItem("Education", "assets/education.png"));
-    DItems.add(DItem("Hobbies", "assets/hobbies.png"));
-    DItems.add(DItem("References", "assets/ref.png"));
     DItems.add(DItem("Experience", "assets/exper.png"));
+    DItems.add(DItem("References", "assets/ref.png"));
+    DItems.add(DItem("Hobbies", "assets/hobbies.png"));
     DItems.add(DItem("My Game", "assets/games.png"));
     DItems.add(DItem("Gallary", "assets/gallary.png"));
     return Scaffold(
