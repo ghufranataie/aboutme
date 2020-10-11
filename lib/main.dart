@@ -82,22 +82,35 @@ class Home extends StatelessWidget {
                         color: Colors.white,
                       ),
                       onTap: () {
-                        if(DItems[Index].Name == "Education"){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=> Educations()));
-                        }else if(DItems[Index].Name == "Hobbies"){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=> Hobbies()));
-                        }
-                        else if(DItems[Index].Name == "References"){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=> References()));
-                        }
-                        else if(DItems[Index].Name == "Experience"){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=> Experiences()));
-                        }
-                        else if(DItems[Index].Name == "My Game"){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=> Games()));
-                        }else if(DItems[Index].Name == "Gallary"){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=> Gallaries()));
-                        }else{
+                        if (DItems[Index].Name == "Education") {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Educations()));
+                        } else if (DItems[Index].Name == "Hobbies") {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Hobbies()));
+                        } else if (DItems[Index].Name == "References") {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => References()));
+                        } else if (DItems[Index].Name == "Experience") {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Experiences()));
+                        } else if (DItems[Index].Name == "My Game") {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Games()));
+                        } else if (DItems[Index].Name == "Gallary") {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Gallaries()));
+                        } else {
                           Navigator.pop(context);
                         }
                       },
@@ -112,23 +125,19 @@ class Home extends StatelessWidget {
         children: <Widget>[
           Stack(
             children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.fromLTRB(18, 18, 18, 0),
-                child: ClipRRect(
-                    borderRadius: BorderRadius.circular(16.0),
-                    child: Image.asset("assets/ghufran3.jpg")),
-              ), // Card(
-              //   margin: EdgeInsets.fromLTRB(20, 20, 20, 0),
-              //   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-              //   elevation: 3,
-              //   child: Container(
-              //     padding: EdgeInsets.all(8),
-              //       child: Image.asset("assets/ghufran2.jpg",),
-              //   ),
-              // ),
+              Container(
+                //color: Colors.deepOrange,
+                height: 220,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: ExactAssetImage("assets/ghufran3.jpg"),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
               Positioned(
-                top: 200,
-                left: 30,
+                bottom: 40,
+                left: 40,
                 child: Text(
                   "GHUFRAN ATAIE",
                   style: TextStyle(
@@ -145,10 +154,10 @@ class Home extends StatelessWidget {
                 ),
               ),
               Positioned(
-                top: 225,
-                left: 123,
+                bottom: 28,
+                left: 134,
                 child: Text(
-                  "OCTOBER 10",
+                  "OCTOBER 11",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 10,
@@ -166,7 +175,7 @@ class Home extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-            child: Text(myBio),
+            child: Text(myBio, textAlign: TextAlign.justify,),
           ),
           Container(
             color: Color.fromARGB(255, 81, 131, 190),
@@ -174,24 +183,49 @@ class Home extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 IconButton(
-                  icon: Image.asset("assets/socials/fb.png", width: 100, height: 100,),
-                  onPressed: ()=> _openLink("https://www.facebook.com/ghufranataie"),
+                  icon: Image.asset(
+                    "assets/socials/fb.png",
+                    width: 100,
+                    height: 100,
+                  ),
+                  onPressed: () =>
+                      _openLink("https://www.facebook.com/ghufranataie"),
                 ),
                 IconButton(
-                  icon: Image.asset("assets/socials/tw.png", width: 100, height: 100,),
-                  onPressed: ()=> _openLink("https://www.twitter.com/ghufranataie"),
+                  icon: Image.asset(
+                    "assets/socials/tw.png",
+                    width: 100,
+                    height: 100,
+                  ),
+                  onPressed: () =>
+                      _openLink("https://www.twitter.com/ghufranataie"),
                 ),
                 IconButton(
-                  icon: Image.asset("assets/socials/lk.png", width: 100, height: 100,),
-                  onPressed: ()=> _openLink("https://www.Linkedin.com/ghufranataie"),
+                  icon: Image.asset(
+                    "assets/socials/lk.png",
+                    width: 100,
+                    height: 100,
+                  ),
+                  onPressed: () =>
+                      _openLink("https://www.Linkedin.com/ghufranataie"),
                 ),
                 IconButton(
-                  icon: Image.asset("assets/socials/ig.png", width: 100, height: 100,),
-                  onPressed: ()=> _openLink("https://www.instagram.com/ghufranataie"),
+                  icon: Image.asset(
+                    "assets/socials/ig.png",
+                    width: 100,
+                    height: 100,
+                  ),
+                  onPressed: () =>
+                      _openLink("https://www.instagram.com/ghufranataie"),
                 ),
                 IconButton(
-                  icon: Image.asset("assets/socials/gt.png", width: 100, height: 100,),
-                  onPressed: ()=> _openLink("https://www.github.com/ghufranataie"),
+                  icon: Image.asset(
+                    "assets/socials/gt.png",
+                    width: 100,
+                    height: 100,
+                  ),
+                  onPressed: () =>
+                      _openLink("https://www.github.com/ghufranataie"),
                 ),
               ],
             ),
@@ -202,10 +236,10 @@ class Home extends StatelessWidget {
   }
 
   //asynchronous
-  _openLink(String url) async{
-    if(await canLaunch(url)){
+  _openLink(String url) async {
+    if (await canLaunch(url)) {
       await launch(url);
-    }else{
+    } else {
       throw "Unable to Lanuch Url: $url";
     }
   }
